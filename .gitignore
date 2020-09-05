@@ -1,0 +1,4 @@
+
+*.php
+phpmailer
+sftp-config.json

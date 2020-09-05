@@ -1,0 +1,90 @@
+.header
+	// position: relative
+	flex: 0 0 auto
+	padding: 15px 0
+	background-color: $main
+	color: $white
+	&__logo
+		display: block
+		img
+			min-width: 180px
+			max-width: 200px
+			height: auto
+	&__menu
+		+media-breakpoint-down(md)
+			background-color: $main
+			position: absolute
+			width: 100%
+			z-index: 2
+			top: 80px
+			right: -100%
+			transition: all .2s ease-in-out
+			&.open
+				right: 0
+		ul
+			display: flex
+			align-items: center
+			list-style-type: none
+			padding: 0
+			margin: 0
+			+media-breakpoint-down(md)
+				height: calc(100vh - 80px)
+				flex-direction: column
+				justify-content: center
+				overflow-y: auto
+			li
+				margin: 0 10px
+				+media-breakpoint-down(md)
+					width: 100%
+					margin: 0
+					a
+						width: 100%
+						display: block
+						text-align: center
+						padding: 12px 0
+						&:hover
+							background-color: #ccc
+				&.active
+					a
+						color: $accent
+						+media-breakpoint-down(md)
+							background-color: #ccc
+				a
+					color: $white
+					&:hover
+						color: $accent
+
+.mobile-btn
+	display: none
+	width: 50px
+	height: 50px
+	background-color: transparent
+	border: none
+	cursor: pointer
+	outline: none
+	+media-breakpoint-down(md)
+		display: block
+	&:focus
+		outline: none
+	span
+		width: 25px
+		height: 2px
+		background-color: $main
+		display: block
+		margin: 3px auto
+		transform: rotate(0)
+		opacity: 1
+		transition: all .2s ease-in-out
+	&.active span
+		&:first-child
+			background-color: $accent
+			transform: rotate(45deg)
+			position: relative
+			top: 5px
+		&:nth-child(2)
+			opacity: 0
+		&:last-child
+			background-color: $accent
+			transform: rotate(-45deg)
+			position: relative
+			top: -5px

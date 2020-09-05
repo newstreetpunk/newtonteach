@@ -1,0 +1,85 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: red
+body input:required:valid,
+body textarea:required:valid
+	color: green
+
+html
+	height: 100%
+
+body
+	height: 100%
+	font-size: 16px
+	position: relative
+	line-height: 1.6
+	font-family: $default-font
+	color: $main
+	font-weight: 300
+	min-width: 320px
+	overflow-x: hidden
+	display: flex
+	flex-direction: column
+
+main
+	flex: 1 0 auto 
+
+img
+	display: block
+	max-width: 100%
+	height: auto
+
+a
+	color: $accent
+	font-weight: 500
+	text-decoration: none
+	transition: all .25s ease
+	&:hover
+		color: darken($accent, 10%)
+		text-decoration: none
+
+.btn
+	border: none
+	background-color: $accent
+	color: $white
+	padding: 6px
+	text-align: center
+	width: auto
+	box-shadow: 0 3px 0 darken($accent, 10%)
+	cursor: pointer
+	outline: none
+	transition: all .25s ease
+	display: inline-block
+	border-radius: 3px
+	&:hover
+		background-color: darken($accent, 3%)
+		color: $white
+	&:active
+		background-color: darken($accent, 10%)
+		border-left: none
+		border-right: none
+		border-top: none
+		border-bottom: none
+
+@import "sections/header"
+
+
+@import "sections/footer"
+	
+
+
+	
+
+
+@import "media" // Всегда в конце
