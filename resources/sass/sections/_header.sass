@@ -4,6 +4,11 @@
 	padding: 15px 0
 	background-color: $main
 	color: $white
+	&__wrap
+		max-width: 1600px
+		width: 100%
+		margin: 0 auto
+		padding: 0 15px
 	&__logo
 		display: block
 		img
@@ -12,6 +17,7 @@
 			height: auto
 	&__menu
 		+media-breakpoint-down(md)
+			height: calc(100vh - 80px)
 			background-color: $main
 			position: absolute
 			width: 100%
@@ -19,6 +25,8 @@
 			top: 80px
 			right: -100%
 			transition: all .2s ease-in-out
+			flex-direction: column
+			overflow-y: auto
 			&.open
 				right: 0
 		ul
@@ -28,12 +36,12 @@
 			padding: 0
 			margin: 0
 			+media-breakpoint-down(md)
-				height: calc(100vh - 80px)
 				flex-direction: column
 				justify-content: center
-				overflow-y: auto
 			li
 				margin: 0 10px
+				a
+					text-transform: uppercase
 				+media-breakpoint-down(md)
 					width: 100%
 					margin: 0
@@ -43,16 +51,37 @@
 						text-align: center
 						padding: 12px 0
 						&:hover
-							background-color: #ccc
+							background-color: $white
 				&.active
 					a
 						color: $accent
 						+media-breakpoint-down(md)
-							background-color: #ccc
+							background-color: $white
 				a
 					color: $white
 					&:hover
 						color: $accent
+	.btn
+		text-transform: none
+		&.btn-o
+			background-color: transparent
+			&:hover
+				background-color: darken($accent, 3%)
+			+media-breakpoint-down(md)
+				border-radius: 0
+				text-transform: uppercase
+				&:hover
+					background-color: $white
+					color: $accent
+		+media-breakpoint-down(md)
+				border-radius: 0
+				background-color: transparent
+				text-transform: uppercase
+				&:hover
+					background-color: $white
+					color: $accent !important
+		&:hover
+			color: $white
 
 .mobile-btn
 	display: none
@@ -69,7 +98,7 @@
 	span
 		width: 25px
 		height: 2px
-		background-color: $main
+		background-color: $white
 		display: block
 		margin: 3px auto
 		transform: rotate(0)
