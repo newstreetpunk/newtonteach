@@ -3,7 +3,7 @@
 @import "vars"
 
 ::placeholder
-	color: #666
+	color: $title
 
 ::selection
 	background-color: $accent
@@ -79,6 +79,16 @@ h1, h2, h3, h4, h5, h6
 h1
 	font-size: 55px
 	line-height: 1.17
+
+input
+	color: $title
+	background-color: $gray
+	border: none
+	border-radius: 30px
+	padding: 12px 20px
+	font-weight: 300
+	&:focus
+		outline: 2px solid rgba($main, .5)
 
 @import "sections/header"
 @import "sections/banner"
