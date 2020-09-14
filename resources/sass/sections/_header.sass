@@ -7,6 +7,12 @@
 	flex: 0 0 auto
 	background-color: $main
 	color: $white
+	transition: top .5s ease
+	&.hide
+		top: -82px
+	&.show
+		top: 0
+		box-shadow: 0 10px 20px rgba($dark, .5)
 	&__wrap
 		max-width: 1600px
 		width: 100%
