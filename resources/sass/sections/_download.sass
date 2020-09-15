@@ -1,0 +1,68 @@
+.onescreen
+	min-height: 100vh
+	height: auto
+	background-size: cover
+	background-position: center
+	overflow: hidden
+	position: relative
+	z-index: 1
+	&:before
+		content: ''
+		display: block
+		position: absolute
+		width: 100%
+		height: 100%
+		left: 0
+		top: 0
+		background-color: rgba($white, .5)
+		z-index: -1
+	h1
+		font-size: 42px
+		line-height: 1.2
+		+media-breakpoint-down(xs)
+			font-size: 30px
+	.descr
+		font-size: 18px
+		font-weight: 400
+		display: block
+		margin: 20px 0 30px
+
+.download
+	&__block
+		display: flex
+		min-height: 100vh
+		height: auto
+		align-items: center
+		padding-top: 82px
+		+media-breakpoint-down(sm)
+			flex-direction: column
+			padding-top: 100px
+	&__item
+		width: 50%
+		+media-breakpoint-down(sm)
+			width: 100%
+			text-align: center
+		&--img
+			img
+				max-width: 80%
+				margin: 0 auto
+				+media-breakpoint-down(md)
+					margin: 0
+					margin-left: auto
+				+media-breakpoint-down(sm)
+					max-width: 100%
+					margin: 0 auto
+	&__btns
+		align-items: center
+		+media-breakpoint-down(sm)
+			justify-content: center
+		a
+			width: 180px
+			margin-right: 10px
+			+media-breakpoint-down(sm)
+				margin: 0 5px
+			img
+				width: 100%
+				height: auto
+
+
