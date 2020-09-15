@@ -72,6 +72,17 @@ a
 		border-right: none
 		border-top: none
 		border-bottom: none
+	&.btn-green
+		background-color: $green
+		&:hover
+			background-color: darken($green, 3%)
+			color: $white
+		&:active
+			background-color: darken($green, 10%)
+			border-left: none
+			border-right: none
+			border-top: none
+			border-bottom: none
 
 h1, h2, h3, h4, h5, h6
 	color: $title
@@ -93,6 +104,7 @@ input
 
 @import "sections/header"
 @import "sections/banner"
+@import "sections/services"
 
 
 @import "sections/footer"

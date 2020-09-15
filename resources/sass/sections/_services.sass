@@ -1,0 +1,45 @@
+.services
+	&__item
+		margin-bottom: 50px
+		padding: 30px 0
+		.container
+			display: flex
+			flex-direction: row
+			align-items: center
+		&:nth-child(even)
+			background-color: $l-blue
+			position: relative
+			&:after, &:before
+				content: ''
+				display: inline-block
+				position: absolute
+				left: 0
+				width: 100%
+				height: 5px
+				background-size: cover
+				background-position: center
+			&:before
+				background-image: url(../img/serv/block_color_up.svg)
+				top: -5px
+			&:after
+				background-image: url(../img/serv/block_color_down.svg)
+				bottom: -5px
+			.container
+				flex-direction: row-reverse
+			img
+				margin-right: 0
+				margin-left: 50px
+		img
+			max-width: 500px
+			width: 100%
+			margin-right: 50px
+		&--text
+			h3
+				text-transform: uppercase
+				margin-bottom: 20px
+				font-size: 30px
+			p
+				font-size: 18px
+				color: $title
+				font-weight: 400
+				margin-bottom: 20px
