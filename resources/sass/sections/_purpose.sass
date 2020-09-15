@@ -1,0 +1,65 @@
+.purpose
+	.container
+		+media-breakpoint-down(md)
+			max-width: 100%
+	&__block
+		flex-wrap: wrap
+		justify-content: center
+		+media-breakpoint-down(xs)
+			margin-top: 30px
+	&__item
+		width: 31%
+		position: relative
+		padding-left: 70px
+		margin: 0 1% 2%
+		z-index: 1
+		+media-breakpoint-down(md)
+			padding: 0 10px
+		+media-breakpoint-down(sm)
+			width: 48%
+		+media-breakpoint-down(xs)
+			width: 100%
+			margin: 0 0 30px
+			padding: 0
+			text-align: center
+		&--count
+			position: absolute
+			left: 0
+			top: 0
+			width: 40px
+			height: 40px
+			background-color: $title
+			color: $white
+			font-weight: bold
+			font-size: 20px
+			text-align: center
+			line-height: 42px
+			border-radius: 50%
+			+media-breakpoint-down(md)
+				background-color: transparent
+				font-size: 170px
+				color: rgba($title, .15)
+				z-index: -1
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+				width: auto
+				height: auto
+				line-height: 1
+		h3
+			font-size: 24px
+			line-height: 1.35
+			margin-bottom: 10px
+			margin-top: -5px
+			+media-breakpoint-down(lg)
+				font-size: 20px
+			+media-breakpoint-down(md)
+				font-size: 18px
+			+media-breakpoint-down(sm)
+				min-height: 48px
+			+media-breakpoint-down(xs)
+				min-height: 0
+		p
+			font-size: 16px
+			+media-breakpoint-down(md)
+				font-size: 14px
