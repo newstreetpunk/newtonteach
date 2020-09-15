@@ -2,6 +2,7 @@
 	background-size: cover
 	background-position: center
 	padding-top: 80px
+	padding-bottom: 50px
 	min-height: 540px
 	display: flex
 	justify-content: center
@@ -10,6 +11,8 @@
 	position: relative
 	color: $white
 	z-index: 1
+	+media-breakpoint-down(sm)
+		padding-top: 100px
 	&:before
 		content: ''
 		display: block
@@ -30,6 +33,28 @@
 	&__subtitle
 		font-size: 20px
 		margin-bottom: 50px
+		+media-breakpoint-down(sm)
+			margin-bottom: 30px
+
+// TIMER
+.timer .etUnit .etNumber
+	font-weight: bold
+	+media-breakpoint-down(sm)
+		font-weight: 500
+		font-size: 34px !important
+		width: auto !important
+.timer .etSep
+	display: none !important
+.etUnit
+	padding: 0 30px
+	border-right: 1px solid rgba(#fff, .5)
+	+media-breakpoint-down(sm)
+		padding: 0 10px
+	&.etSeconds
+		border-right: 0
+.timer .etUnit .etSign
+	font-size: 16px !important
+	font-weight: 300 !important
 
 .qwiz
 	padding: 80px 0
