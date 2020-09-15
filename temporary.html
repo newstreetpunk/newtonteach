@@ -64,7 +64,7 @@
 				<h1>Платформа скоро запустится</h1>
 				<div class="temporary__subtitle">Вы можете помочь нам сделать ее лучше ответив на несколько вопросов ниже</div>
 				<!-- /.temporary__subtitle -->
-				<div class="timer">ТАЙМЕР</div>
+				<div class="timer" id="timer">ТАЙМЕР</div>
 				<!-- /.timer -->
 			</div>
 			<!-- /.container -->
@@ -209,6 +209,39 @@
 	<!-- /#footer.footer -->
 
     <script src="js/scripts.min.js"></script>
+
+    <script>
+    	$(document).ready(function(){
+    		$("#timer").eTimer({
+    			etType: 0, 
+    			etDate: "02.02.2021.0.0", 
+    			etTitleText: "", 
+    			etTitleSize: 0, 
+    			etShowSign: 1, 
+    			etSep: "", 
+    			etFontFamily: "inherit", 
+    			etTextColor: "white", 
+    			etPaddingTB: 15, 
+    			etPaddingLR: 15, 
+    			etBackground: "transparent", 
+    			etBorderSize: 0, 
+    			etBorderRadius: 0, 
+    			etBorderColor: "transparent", 
+    			etShadow: "none", 
+    			etLastUnit: 4, 
+    			etNumberFontFamily: "inherit", 
+    			etNumberSize: 35, 
+    			etNumberColor: "white", 
+    			etNumberPaddingTB: 0, 
+    			etNumberPaddingLR: 8, 
+    			etNumberBackground: "transparent", 
+    			etNumberBorderSize: 0, 
+    			etNumberBorderRadius: 0, 
+    			etNumberBorderColor: "white", 
+    			etNumberShadow: "none"
+    		});
+    	});
+    </script>
 
 </body>
 

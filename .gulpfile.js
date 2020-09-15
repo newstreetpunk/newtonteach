@@ -13,6 +13,7 @@ newtonteach: {
 		scripts: {
 			src: [
 				'node_modules/jquery/dist/jquery.min.js',
+				base.newtonteach + '/resources/libs/timer/timer.js',
 				base.newtonteach + '/resources/js/common.js',
 			],
 			dest:       base.newtonteach + '/public/js',
