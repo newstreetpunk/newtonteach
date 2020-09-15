@@ -2,10 +2,16 @@
 	&__item
 		margin-bottom: 50px
 		padding: 30px 0
+		+media-breakpoint-down(sm)
+			margin-bottom: 20px
 		.container
 			display: flex
 			flex-direction: row
 			align-items: center
+			+media-breakpoint-down(md)
+				max-width: 100%
+			+media-breakpoint-down(sm)
+				flex-direction: column !important
 		&:nth-child(even)
 			background-color: $l-blue
 			position: relative
@@ -29,17 +35,30 @@
 			img
 				margin-right: 0
 				margin-left: 50px
+				+media-breakpoint-down(sm)
+					margin-left: 0
 		img
 			max-width: 500px
 			width: 100%
 			margin-right: 50px
+			+media-breakpoint-down(md)
+				max-width: 400px
+			+media-breakpoint-down(sm)
+				margin-right: 0
+				margin-bottom: 25px
 		&--text
 			h3
 				text-transform: uppercase
 				margin-bottom: 20px
 				font-size: 30px
+				+media-breakpoint-down(sm)
+					margin-bottom: 15px
+					font-size: 26px
+					line-height: 1.4
 			p
 				font-size: 18px
 				color: $title
 				font-weight: 400
 				margin-bottom: 20px
+				+media-breakpoint-down(sm)
+					font-size: 16px

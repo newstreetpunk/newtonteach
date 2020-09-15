@@ -83,6 +83,18 @@ a
 			border-right: none
 			border-top: none
 			border-bottom: none
+	&.btn-white
+		background-color: $white
+		color: $main
+		&:hover
+			background-color: darken($white, 3%)
+			color: $main
+		&:active
+			background-color: darken($white, 10%)
+			border-left: none
+			border-right: none
+			border-top: none
+			border-bottom: none
 
 h1, h2, h3, h4, h5, h6
 	color: $title
@@ -91,6 +103,9 @@ h1, h2, h3, h4, h5, h6
 h1
 	font-size: 55px
 	line-height: 1.17
+
+.text-center
+	text-align: center
 
 input
 	color: $title
@@ -105,6 +120,7 @@ input
 @import "sections/header"
 @import "sections/banner"
 @import "sections/services"
+@import "sections/forcreators"
 
 
 @import "sections/footer"
