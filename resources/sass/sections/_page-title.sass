@@ -10,7 +10,9 @@
 	justify-content: flex-end
 	position: relative
 	+media-breakpoint-down(xs)
-		padding-top: 100px
+		padding-top: 110px
+		min-height: 0
+		margin-bottom: 150px
 	&:after
 		content: ''
 		display: inline-block
@@ -22,6 +24,8 @@
 		background-image: url(../img/title_wave.svg)
 		background-size: cover
 		background-position: center bottom
+		+media-breakpoint-down(xs)
+			height: 150px
 	h1
 		color: $white
 	.suptitle
