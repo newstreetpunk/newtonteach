@@ -1,5 +1,5 @@
-.services
-	&__item
+.items
+	.item
 		margin-bottom: 50px
 		padding: 30px 0
 		+media-breakpoint-down(sm)
@@ -32,20 +32,23 @@
 				bottom: -5px
 			.container
 				flex-direction: row-reverse
-			img
+			.item__img
 				margin-right: 0
 				margin-left: 50px
 				+media-breakpoint-down(sm)
 					margin-left: 0
-		img
-			max-width: 500px
-			width: 100%
+		&__img
+			flex: 1 0 500px
 			margin-right: 50px
 			+media-breakpoint-down(md)
-				max-width: 400px
+				flex: 1 0 400px
 			+media-breakpoint-down(sm)
+				flex: auto
+				max-width: 400px
 				margin-right: 0
 				margin-bottom: 25px
+			img
+				margin: 0 auto
 		&--text
 			h3
 				text-transform: uppercase
