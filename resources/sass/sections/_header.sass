@@ -26,18 +26,24 @@
 			height: auto
 	&__menu
 		+media-breakpoint-down(md)
-			height: calc(100vh - 80px)
+			height: calc(100vh - 90px)
 			background-color: $main
 			position: absolute
 			width: 100%
 			z-index: 2
-			top: 80px
+			top: 90px
 			right: -100%
 			transition: all .2s ease-in-out
 			flex-direction: column
 			overflow-y: auto
 			&.open
 				right: 0
+			.lang
+				display: flex
+				flex-direction: row
+				li
+					width: auto
+					margin: 0 6px
 		ul
 			display: flex
 			align-items: center

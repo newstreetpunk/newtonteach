@@ -95,6 +95,19 @@ a
 			border-right: none
 			border-top: none
 			border-bottom: none
+	&.btn-blue
+		background-color: $btn-blue
+		color: $white
+		&:hover
+			background-color: darken($btn-blue, 3%)
+			color: $white
+		&:active
+			background-color: darken($btn-blue, 10%)
+			border-left: none
+			border-right: none
+			border-top: none
+			border-bottom: none
+			outline: 2px solid rgba($main, .5)
 
 h1, h2, h3, h4, h5, h6
 	color: $title
@@ -121,6 +134,7 @@ input
 @import "sections/banner"
 @import "sections/services"
 @import "sections/forcreators"
+@import "sections/subscribe"
 
 
 @import "sections/footer"
