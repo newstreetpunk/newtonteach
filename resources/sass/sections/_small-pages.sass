@@ -67,26 +67,36 @@
 
 // Страница 404
 .error
-	padding: 90px 15px
+	background-color: $main
+	padding: 120px 15px 50px
+	position: relative
 	display: flex
 	flex-direction: column
 	justify-content: center
 	align-items: center
-	+media-breakpoint-down(md)
-		padding-top: 100px
-	+media-breakpoint-down(xs)
-		padding-bottom: 30px
+	min-height: 500px
+	height: 100vh
+	color: $white
+	h1
+		color: $white
+		text-transform: uppercase
+		font-weight: normal
+		font-size: 7vmax
+	p
+		margin: 10px 0 30px
+		font-size: 20px
 	img
-		max-width: 700px
+		max-width: 200px
 		width: 100%
-	h2
-		font-weight: 400
-		font-size: 24px
-		margin: 25px 0
-		+media-breakpoint-down(xs)
-			font-size: 20px
-			margin: 20px 0
-	.btn
-		padding: 14px 50px
+	&__info
+		text-align: center
+		img
+			margin: 0 auto
+	.logo-center
+		position: absolute
+		top: 30px
+		left: 50%
+		transform: translate(-50%, 0)
+
 
 
