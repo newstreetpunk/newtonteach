@@ -145,7 +145,7 @@ function newtonteach_watch() {
 	watch(projects.newtonteach.code.src).on('change', browserSync.reload);
 };
 
-// exports.newtonteach_cleanimg = newtonteach_cleanimg;
-module.exports = parallel(newtonteach_images, newtonteach_styles, newtonteach_scripts, newtonteach_browsersync, newtonteach_watch);
+exports.newtonteach_cleanimg = newtonteach_cleanimg;
+exports.newtonteach = parallel(newtonteach_images, newtonteach_styles, newtonteach_scripts, newtonteach_browsersync, newtonteach_watch);
 
 /* newtonteach END */
