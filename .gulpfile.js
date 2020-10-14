@@ -14,6 +14,7 @@ newtonteach: {
 			src: [
 				'node_modules/jquery/dist/jquery.min.js',
 				base.newtonteach + '/resources/libs/timer/timer.js',
+				'node_modules/slick-carousel/slick/slick.js',
 				base.newtonteach + '/resources/js/common.js',
 			],
 			dest:       base.newtonteach + '/public/js',

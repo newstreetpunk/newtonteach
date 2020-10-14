@@ -27,4 +27,11 @@ jQuery(function($) {
 			}
 	});
 
+	$('.onescreen__slider').slick({
+		infinity: true,
+		arrows: false,
+		dots: true,
+		adaptiveHeight: true
+	});
+
 });

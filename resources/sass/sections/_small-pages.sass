@@ -16,6 +16,31 @@
 		top: 0
 		background-color: rgba($white, .5)
 		z-index: -1
+	&.sign
+		display: flex
+		&::before
+			display: none
+	&__item
+		display: flex
+		align-items: center
+		padding: 80px 15px 20px
+	&__left
+		width: 60%
+		color: $white
+	&__right
+		width: 40%
+		background-color: #D6F0F4
+		color: $main
+	&__slider
+		width: 100%
+		&--item
+			text-align: center
+			img
+				max-width: 620px
+				margin: 0 auto 30px
+		&--title
+			font-size: 30px
+			font-weight: bold
 	h1
 		font-size: 42px
 		line-height: 1.2
@@ -26,6 +51,18 @@
 		font-weight: 400
 		display: block
 		margin: 20px 0 30px
+
+.slick-dots
+	bottom: -40px
+	li
+		background-color: $white
+		border-radius: 50%
+		transition: all .25s ease
+		margin: 0 8px
+		&:hover
+			background-color: #5291ab
+		&.slick-active
+			background-color: #5291ab
 
 .download
 	&__block
