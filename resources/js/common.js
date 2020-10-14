@@ -28,10 +28,12 @@ jQuery(function($) {
 	});
 
 	$('.onescreen__slider').slick({
+		autoplay: true,
 		infinity: true,
 		arrows: false,
 		dots: true,
-		adaptiveHeight: true
+		adaptiveHeight: true,
+		lazyLoad: false
 	});
 
 });
