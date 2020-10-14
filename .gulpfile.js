@@ -1,43 +1,85 @@
-newtonteach: {
-		port: ++port,
+// VARIABLES & PATHS
+let preprocessor = 'sass', // Preprocessor (sass, scss, less, styl)
+    fileswatch   = 'html,htm,txt,json,md,woff2,php', // List of files extensions for watching & hard reload (comma separated)
+    pageversion  = 'html,htm,php', // List of files extensions for watching change version files (comma separated)
+    imageswatch  = 'jpg,jpeg,png,webp,svg', // List of images extensions for watching & compression (comma separated)
+    online       = true, // If «false» - Browsersync will work offline without internet connection
+    basename     = require('path').basename(__dirname),
+    forProd      = [
+					'/**',
+					' * @author Alexsab.ru',
+					' */',
+					''].join('\n');
 
-		base: base.newtonteach,
-		dest: base.newtonteach,
+const { src, dest, parallel, series, watch, task } = require('gulp'),
+	sass           = require('gulp-sass'),
+	cleancss       = require('gulp-clean-css'),
+	concat         = require('gulp-concat'),
+	browserSync    = require('browser-sync').create(),
+	uglify         = require('gulp-uglify-es').default,
+	autoprefixer   = require('gulp-autoprefixer'),
+	imagemin       = require('gulp-imagemin'),
+	newer          = require('gulp-newer'),
+	rsync          = require('gulp-rsync'),
+	del            = require('del'),
+	connect        = require('gulp-connect-php'),
+	header         = require('gulp-header'),
+	notify         = require('gulp-notify'),
+	rename         = require('gulp-rename'),
+	responsive     = require('gulp-responsive'),
+	pngquant       = require('imagemin-pngquant'),
+	merge          = require('merge-stream'),
+	// version        = require('gulp-version-number'),
+	// revAll         = require('gulp-rev-all'),
+	replace        = require('gulp-replace');
 
-		styles: {
-			src:    base.newtonteach + '/resources/' + preprocessor + '/**/*',
-			dest:   base.newtonteach + '/public/css',
-			output: 'main.min.css',
-		},
+if(typeof projects == 'undefined') 
+	global.projects = {};
+if(typeof port == 'undefined') 
+	global.port = 8100;
 
-		scripts: {
-			src: [
-				'node_modules/jquery/dist/jquery.min.js',
-				base.newtonteach + '/resources/libs/timer/timer.js',
-				'node_modules/slick-carousel/slick/slick.js',
-				base.newtonteach + '/resources/js/common.js',
-			],
-			dest:       base.newtonteach + '/public/js',
-			output:     'scripts.min.js',
-		},
 
-		images: {
-			src:  base.newtonteach + '/resources/img/**/*',
-			dest: base.newtonteach + '/public/img',
-		},
+projects.newtonteach = {
 
-		code: {
-			src: [
-				base.newtonteach  + '/**/*.{' + fileswatch + '}'
-			],
-		},
-		forProd: [
-			'/**',
-			' * @author https://github.com/newstreetpunk',
-			' * @author https://github.com/alexsab',
-			' */',
-			''].join('\n'),
+	port: ++port,
+
+	base: basename,
+	dest: basename,
+
+	styles: {
+		src:    basename + '/resources/' + preprocessor + '/**/*',
+		dest:   basename + '/public/css',
+		output: 'main.min.css',
 	},
+
+	scripts: {
+		src: [
+			'node_modules/jquery/dist/jquery.min.js',
+			basename + '/resources/libs/timer/timer.js',
+			'node_modules/slick-carousel/slick/slick.js',
+			basename + '/resources/js/common.js',
+		],
+		dest:       basename + '/public/js',
+		output:     'scripts.min.js',
+	},
+
+	images: {
+		src:  basename + '/resources/img/**/*',
+		dest: basename + '/public/img',
+	},
+
+	code: {
+		src: [
+			basename  + '/**/*.{' + fileswatch + '}'
+		],
+	},
+	forProd: [
+		'/**',
+		' * @author https://github.com/newstreetpunk',
+		' * @author https://github.com/alexsab',
+		' */',
+		''].join('\n'),
+}
 
 
 /* newtonteach START */
@@ -103,7 +145,7 @@ function newtonteach_watch() {
 	watch(projects.newtonteach.code.src).on('change', browserSync.reload);
 };
 
-exports.newtonteach_cleanimg = newtonteach_cleanimg;
-exports.newtonteach = parallel(newtonteach_images, newtonteach_styles, newtonteach_scripts, newtonteach_browsersync, newtonteach_watch);
+// exports.newtonteach_cleanimg = newtonteach_cleanimg;
+module.exports = parallel(newtonteach_images, newtonteach_styles, newtonteach_scripts, newtonteach_browsersync, newtonteach_watch);
 
 /* newtonteach END */
