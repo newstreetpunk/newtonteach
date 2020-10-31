@@ -13,6 +13,7 @@ let preprocessor = 'sass', // Preprocessor (sass, scss, less, styl)
 
 const { src, dest, parallel, series, watch, task } = require('gulp'),
 	sass           = require('gulp-sass'),
+	sourcemaps     = require('gulp-sourcemaps'),
 	cleancss       = require('gulp-clean-css'),
 	concat         = require('gulp-concat'),
 	browserSync    = require('browser-sync').create(),
@@ -102,44 +103,46 @@ function newtonteach_browsersync() {
 // Styles
 function newtonteach_styles() {
 	return src(projects.newtonteach.styles.src)
+	.pipe(sourcemaps.init())
 	.pipe(eval(preprocessor)({ outputStyle: 'expanded' }).on("error", notify.onError()))
 	.pipe(concat(projects.newtonteach.styles.output))
 	.pipe(autoprefixer({ grid: true, overrideBrowserslist: ['last 10 versions'] }))
 	.pipe(cleancss( {level: { 1: { specialComments: 0 } } })) // Optional. Comment out when debugging
+	.pipe(sourcemaps.write())
 	.pipe(dest(projects.newtonteach.styles.dest))
 	.pipe(browserSync.stream())
 
 };
 
-exports.newtonteach_versioningCss = () => {
-  return src(projects.newtonteach.code.src)
-    .pipe(replace(/(.*)\.css\?(v=.+&)*(.*)/g, '$1.css?v='+makeid()+'&$3'))
-    .pipe(replace(/(.*)\.css\"(.*)/g, '$1.css?v='+makeid()+'"$2'))
-    .pipe(replace(/(.*)\.css\'(.*)/g, '$1.css?v='+makeid()+'\'$2'))
-    .pipe(dest(function (file) {
-        return file.base;
-    }));
-};
+// exports.newtonteach_versioningCss = () => {
+//   return src(projects.newtonteach.code.src)
+//     .pipe(replace(/(.*)\.css\?(v=.+&)*(.*)/g, '$1.css?v='+makeid()+'&$3'))
+//     .pipe(replace(/(.*)\.css\"(.*)/g, '$1.css?v='+makeid()+'"$2'))
+//     .pipe(replace(/(.*)\.css\'(.*)/g, '$1.css?v='+makeid()+'\'$2'))
+//     .pipe(dest(function (file) {
+//         return file.base;
+//     }));
+// };
 
-exports.newtonteach_versioningJs = () => {
-  return src(projects.newtonteach.code.src)
-    .pipe(replace(/(.*)\.js\?(v=.+&)*(.*)/g, '$1.js?v='+makeid()+'&$3'))
-    .pipe(replace(/(.*)\.js\"(.*)/g, '$1.js?v='+makeid()+'"$2'))
-    .pipe(replace(/(.*)\.js\'(.*)/g, '$1.js?v='+makeid()+'\'$2'))
-    .pipe(dest(function (file) {
-        return file.base;
-    }));
-};
+// exports.newtonteach_versioningJs = () => {
+//   return src(projects.newtonteach.code.src)
+//     .pipe(replace(/(.*)\.js\?(v=.+&)*(.*)/g, '$1.js?v='+makeid()+'&$3'))
+//     .pipe(replace(/(.*)\.js\"(.*)/g, '$1.js?v='+makeid()+'"$2'))
+//     .pipe(replace(/(.*)\.js\'(.*)/g, '$1.js?v='+makeid()+'\'$2'))
+//     .pipe(dest(function (file) {
+//         return file.base;
+//     }));
+// };
 
-exports.newtonteach_versioningImage = () => {
-  return src(projects.newtonteach.code.src)
-    .pipe(replace(/(.*)\.(png|jpg|jpeg|gif)\?(_v=.+&)*(.*)/g, '$1.$2?v='+makeid()+'&$4'))
-    .pipe(replace(/(.*)\.(png|jpg|jpeg|gif)\"(.*)/g, '$1.$2?v='+makeid()+'"$3'))
-    .pipe(replace(/(.*)\.(png|jpg|jpeg|gif)\'(.*)/g, '$1.$2?v='+makeid()+'\'$3'))
-    .pipe(dest(function (file) {
-        return file.base;
-    }));
-};
+// exports.newtonteach_versioningImage = () => {
+//   return src(projects.newtonteach.code.src)
+//     .pipe(replace(/(.*)\.(png|jpg|jpeg|gif)\?(_v=.+&)*(.*)/g, '$1.$2?v='+makeid()+'&$4'))
+//     .pipe(replace(/(.*)\.(png|jpg|jpeg|gif)\"(.*)/g, '$1.$2?v='+makeid()+'"$3'))
+//     .pipe(replace(/(.*)\.(png|jpg|jpeg|gif)\'(.*)/g, '$1.$2?v='+makeid()+'\'$3'))
+//     .pipe(dest(function (file) {
+//         return file.base;
+//     }));
+// };
 
 // Scripts
 function newtonteach_scripts() {
