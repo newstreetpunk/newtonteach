@@ -35,7 +35,7 @@
 					<li><a href="#">О нас</a></li>					
 				</ul>
 
-<!-- 				<ul>
+				<!-- <ul>
 					<li><a href="#" class="btn">Регистрация</a></li>
 					<li><a href="#" class="btn btn-o">Войти</a></li>
 				</ul> -->
@@ -92,10 +92,47 @@
 			<!-- /.onescreen__left -->
 
 			<div class="onescreen__item onescreen__right">
+
+				<a href="javascript:void(0)" class="back-link">
+					<i class="back-link__icon">
+						<img src="img/icons/arrow-left.svg" alt="Назад">
+					</i>
+					<span class="back-link__text">Назад</span>
+					<!-- /.back-link__text -->
+				</a>
+				<!-- /.back-link -->
+
+				<h1>Регистрация</h1>
+				<div class="sign__form--subtitle">Вы регистрируетесь как учитель</div>
+				<!-- /.sign__form--subtitle -->
+
 				<div class="sign__form">
-					<h1>Регистрация</h1>
-					<div class="sign__form--subtitle">Вы регистрируетесь как учитель</div>
-					<!-- /.sign__form--subtitle -->
+
+					<form>
+						
+						<input type="text" name="name" placeholder="ФИО">
+						<input type="email" name="Email" placeholder="Email">
+						<input type="tel" name="phone" placeholder="Телефон">
+						<input type="text" name="country" placeholder="Страна">
+						<input type="password" name="password" placeholder="Пароль">
+						<select name="grade" id="grade">
+							<option value="Учитель">Учитель</option>
+							<option value="Родитель">Родитель</option>
+							<option value="Студент">Студент</option>
+						</select>
+
+						<span class="custom-checkbox">
+							<input type="checkbox" id="agree" required>							
+							<label for="agree">
+								Я согласен с <a href="#">условиями и политикой конфиденциальности</a>
+							</label>
+						</span>
+						<!-- /.custom-checkbox -->
+
+						<button type="submit" class="btn btn-green">Регистрация</button>						
+
+					</form>
+					
 				</div>
 				<!-- /.sign__form -->
 			</div>

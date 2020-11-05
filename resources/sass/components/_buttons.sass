@@ -1,0 +1,57 @@
+.btn
+	border: none
+	background-color: $accent
+	color: $white
+	padding: 6px 20px
+	text-align: center
+	width: auto
+	cursor: pointer
+	outline: none
+	transition: all .25s ease
+	display: inline-block
+	border-radius: 30px
+	&:hover
+		background-color: darken($accent, 3%)
+		color: $white
+	&:active
+		background-color: darken($accent, 10%)
+		border-left: none
+		border-right: none
+		border-top: none
+		border-bottom: none
+	&.btn-green
+		background-color: $green
+		&:hover
+			background-color: darken($green, 3%)
+			color: $white
+		&:active
+			background-color: darken($green, 10%)
+			border-left: none
+			border-right: none
+			border-top: none
+			border-bottom: none
+	&.btn-white
+		background-color: $white
+		color: $main
+		&:hover
+			background-color: darken($white, 3%)
+			color: $main
+		&:active
+			background-color: darken($white, 10%)
+			border-left: none
+			border-right: none
+			border-top: none
+			border-bottom: none
+	&.btn-blue
+		background-color: $btn-blue
+		color: $white
+		&:hover
+			background-color: darken($btn-blue, 3%)
+			color: $white
+		&:active
+			background-color: darken($btn-blue, 10%)
+			border-left: none
+			border-right: none
+			border-top: none
+			border-bottom: none
+			outline: 2px solid rgba($main, .5)

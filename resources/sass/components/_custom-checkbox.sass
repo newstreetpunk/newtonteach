@@ -1,0 +1,36 @@
+.custom-checkbox
+	position: relative
+	padding-left: 35px
+	font-size: 12px
+	margin: 20px 0
+	display: block
+	label
+		margin: 0
+		&:before
+			content: ''
+			display: inline-block
+			width: 30px
+			height: 30px
+			background-size: 100%
+			background-position: center
+			border: 2px solid #578DA6
+			border-radius: 50%
+			position: absolute
+			left: 0
+			top: 50%
+			margin-top: -15px
+			cursor: pointer
+			transition: all .3s ease
+			box-sizing: border-box
+		a
+			color: $main
+			font-weight: normal
+			&:hover
+				text-decoration: underline
+	input
+		width: auto
+		position: absolute
+		opacity: 0
+		z-index: -1
+		&:checked ~ label:before
+			background-image: url(../img/icons/check.svg)
