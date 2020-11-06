@@ -44,6 +44,30 @@ body
 					color: $white
 		main
 			background-color: #80C0D6
+	&.isnohome
+		.items
+			.item
+				.container
+					flex-direction: row-reverse
+				&__img
+					flex: 1 0 325px
+					margin-right: auto
+					margin-left: 100px
+					+media-breakpoint-down(md)
+						margin-left: 30px
+					+media-breakpoint-down(sm)
+						margin-left: auto
+				&:nth-child(even)
+					.container
+						flex-direction: row
+					.item__img
+						margin-right: 100px
+						margin-left: auto
+						+media-breakpoint-down(md)
+							margin-right: 30px
+						+media-breakpoint-down(sm)
+							margin-right: auto
+
 
 main
 	flex: 1 0 auto
