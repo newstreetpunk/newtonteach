@@ -36,4 +36,9 @@ jQuery(function($) {
 		lazyLoad: false
 	});
 
+	$('select').select2({
+		minimumResultsForSearch: Infinity,
+		width: '100%'
+	});
+
 });

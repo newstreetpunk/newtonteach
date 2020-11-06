@@ -58,6 +58,7 @@ projects.newtonteach = {
 			'node_modules/jquery/dist/jquery.min.js',
 			basename + '/resources/libs/timer/timer.js',
 			'node_modules/slick-carousel/slick/slick.js',
+			'node_modules/select2/dist/js/select2.js',
 			basename + '/resources/js/common.js',
 		],
 		dest:       basename + '/public/js',
