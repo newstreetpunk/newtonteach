@@ -36,8 +36,12 @@ body
 	&.sign
 		.header
 			background-color: transparent
+			+media-breakpoint-down(md)
+				background-color: $main
 			a
 				color: $main
+				+media-breakpoint-down(md)
+					color: $white
 		main
 			background-color: #80C0D6
 

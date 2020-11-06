@@ -38,7 +38,8 @@ jQuery(function($) {
 
 	$('select').select2({
 		minimumResultsForSearch: Infinity,
-		width: '100%'
+		width: '100%',
+		dropdownParent: $('.select-wrapper')
 	});
 
 });

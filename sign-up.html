@@ -110,20 +110,24 @@
 
 					<form>
 						
-						<input type="text" name="name" placeholder="ФИО">
-						<input type="email" name="Email" placeholder="Email">
-						<input type="tel" name="phone" placeholder="Телефон">
+						<input type="text" name="name" placeholder="ФИО" required>
+						<input type="email" name="Email" placeholder="Email" required>
+						<input type="tel" name="phone" placeholder="Телефон" required>
 						<input type="text" name="country" placeholder="Страна">
-						<input type="password" name="password" placeholder="Пароль">
-						<select name="grade" id="grade">
-							<option value="Кем являетесь..." selected disabled>Кем являетесь...</option>
-							<option value="Учитель">Учитель</option>
-							<option value="Родитель">Родитель</option>
-							<option value="Студент">Студент</option>
-						</select>
+						<input type="password" name="password" placeholder="Пароль" required>
+						
+						<div class="select-wrapper">
+							<select name="grade" id="grade" required>
+								<option selected disabled>Кем являетесь...</option>
+								<option value="Учитель">Учитель</option>
+								<option value="Родитель">Родитель</option>
+								<option value="Студент">Студент</option>
+							</select>
+						</div>
+						<!-- /.select-wrapper -->						
 
 						<span class="custom-checkbox">
-							<input type="checkbox" id="agree" required>							
+							<input type="checkbox" id="agree" checked required>							
 							<label for="agree">
 								Я согласен с <a href="#">условиями и политикой конфиденциальности</a>
 							</label>
