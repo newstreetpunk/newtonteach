@@ -24,3 +24,14 @@
 		padding: 12px 20px
 .select2-container--default .select2-results__option--highlighted[aria-selected]
 	background-color: $dark
+
+.select2-container--default .select2-results>.select2-results__options
+	&::-webkit-scrollbar
+		width: 6px
+	&::-webkit-scrollbar-track
+		background-color: $gray
+		border-radius: 3px
+	&::-webkit-scrollbar-thumb
+		background-color: $main
+		border-radius: 3px
+		outline: none

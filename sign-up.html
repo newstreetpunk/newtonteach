@@ -113,12 +113,29 @@
 						<input type="text" name="name" placeholder="ФИО" required>
 						<input type="email" name="Email" placeholder="Email" required>
 						<input type="tel" name="phone" placeholder="Телефон" required>
-						<input type="text" name="country" placeholder="Страна">
-						<input type="password" name="password" placeholder="Пароль" required>
+						
+						<select name="country" id="country" data-placeholder="-- страна --">
+							<option></option>
+							<option value="1">Australia</option>
+							<option value="2">Canada</option>
+							<option value="3">United Kingdom</option>
+							<option value="4">United States</option>
+							<option value="78">France</option>
+							<option value="103">Hungary</option>
+							<option value="105">India</option>
+							<option value="109">Ireland</option>
+							<option value="159">Netherlands</option>
+							<option value="161">New Zealand</option>
+							<option value="184">Romania</option>
+							<option value="185">Russian Federation</option>
+							<option value="210">Spain</option>
+						</select>
+
+						<input type="password" name="password" placeholder="Пароль" required style="margin-top: 18px">
 						
 						<div class="select-wrapper">
-							<select name="grade" id="grade" required>
-								<option selected disabled>Кем являетесь...</option>
+							<select name="grade" id="grade" required data-placeholder="-- кем являетесь --" data-minimum-results-for-search="Infinity">
+								<option></option>
 								<option value="Учитель">Учитель</option>
 								<option value="Родитель">Родитель</option>
 								<option value="Студент">Студент</option>
