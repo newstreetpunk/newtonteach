@@ -1,0 +1,59 @@
+.contacts
+	&__block
+		max-width: 920px
+		+media-breakpoint-down(md)
+			max-width: 100%
+		+media-breakpoint-down(sm)
+			flex-direction: column-reverse
+		margin: 0 auto
+	&__item
+		width: 50%
+		+media-breakpoint-down(sm)
+			width: 100%
+			&:last-child
+				margin-bottom: 30px
+
+.contacts-info
+	&__item
+		font-size: 30px
+		line-height: 1.45
+		font-weight: 300
+		color: #000
+		margin-bottom: 30px
+		+media-breakpoint-down(md)
+			font-size: 18px
+	&__mail
+		font-weight: 300
+		color: $main
+	&__address
+		font-size: 18px
+		+media-breakpoint-down(md)
+		font-size: 16px
+
+.contacts-form
+	input, textarea
+		width: 100%
+		border-radius: 0
+		border: 1px solid #c7c7c7
+		background-color: transparent
+		margin-bottom: 20px
+		padding: 15px 20px
+		color: #555
+		&::placeholder
+			color: #777	
+		&:focus
+			outline: 2px solid rgba($main, .5)
+	textarea
+		font-weight: 300
+		color: #555
+		resize: none
+		height: 120px
+		overflow-y: auto
+		&:required:valid
+			color: #555
+	.btn
+		padding: 15px 60px
+		+media-breakpoint-down(xs)
+			width: 100%
+			text-align: center
+		

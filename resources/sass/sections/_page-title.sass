@@ -38,3 +38,32 @@
 		+media-breakpoint-down(xs)
 			font-size: 14px
 			letter-spacing: 2px
+	&.contacts-title
+		min-height: 400px
+		justify-content: center
+		margin-bottom: 80px
+		&:after
+			display: none
+		.container
+			display: flex
+			flex-direction: column
+		+media-breakpoint-down(sm)
+			min-height: 340px
+			margin-bottom: 40px
+		h1
+			order: 1
+			margin-bottom: 5%
+			font-size: 80px
+			text-transform: none
+			+media-breakpoint-down(sm)
+				font-size: 50px
+			+media-breakpoint-down(xs)
+				font-size: 40px
+		.suptitle
+			order: 2
+			margin: 0
+			font-size: 26px
+			font-weight: 300
+			text-transform: none
+			+media-breakpoint-down(sm)
+				font-size: 20px
