@@ -28,7 +28,7 @@ body
 	position: relative
 	line-height: 1.6
 	font-family: $default-font
-	color: $main
+	color: $text-color
 	font-weight: 300
 	min-width: 320px
 	overflow-x: hidden
@@ -69,8 +69,9 @@ body
 						+media-breakpoint-down(sm)
 							margin-right: auto
 
-.container
-	max-width: 1140px
+@media (min-width: 1400px)
+	.container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl
+		max-width: 1140px
 
 main
 	flex: 1 0 auto
@@ -100,7 +101,7 @@ h1
 
 section
 	h2
-		font-size: 42px
+		font-size: 1.5rem
 		line-height: 1.23
 		text-align: center
 		margin-bottom: 40px
@@ -108,15 +109,10 @@ section
 			font-size: 30px
 			margin-bottom: 20px
 	.sect-subtitle
-		font-size: 24px
-		line-height: 1.4
+		line-height: 1.5
 		text-align: center
-		margin: 0 auto 40px
+		margin: 0 auto 32px
 		max-width: 560px
-		width: 100%
-		+media-breakpoint-down(xs)
-			font-size: 18px
-			margin-bottom: 20px
 
 .text-center
 	text-align: center

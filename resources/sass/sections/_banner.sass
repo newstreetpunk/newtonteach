@@ -2,27 +2,30 @@
 	background-size: contain
 	background-repeat: no-repeat
 	background-position: right top
-	+media-breakpoint-down(md)
+	+media-breakpoint-down(lg)
 		background-size: cover
 	&__block
 		min-height: 700px
 		height: 100vh
 		padding: 80px 0
 		flex-wrap: wrap
-		+media-breakpoint-down(sm)
+		+media-breakpoint-down(lg)
 			height: auto
-			padding-top: 120px
+			min-height: 1px
+			//padding-top: 120px
 		+media-breakpoint-down(xs)
 			padding-bottom: 30px
 	&__item
 		width: 50%
-		+media-breakpoint-down(sm)
+		+media-breakpoint-down(lg)
 			width: 100%
 	h1
 		max-width: 460px
 		font-weight: bold
-		+media-breakpoint-down(sm)
+		+media-breakpoint-down(lg)
+			font-size: 5.2vmax
 			max-width: 100%
+			margin-bottom: 30px
 			br
 				display: none
 	&__form
@@ -34,6 +37,10 @@
 		padding: 34px
 		border-radius: 30px
 		box-shadow: 0 0 20px rgba($dark, .1)
+		+media-breakpoint-down(md)
+			margin: 0
+		+media-breakpoint-down(sm)
+			max-width: 100%
 		h4
 			font-size: 1.25rem
 			margin-bottom: 20px
