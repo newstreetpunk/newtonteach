@@ -15,8 +15,6 @@
 		top: 0
 		box-shadow: 0 10px 20px rgba($dark, .5)
 		background-color: $main !important
-		a
-			color: $white !important
 	&__wrap
 		max-width: 1377px
 		width: 100%
@@ -58,44 +56,38 @@
 				flex-direction: column
 				justify-content: center
 			li
-				padding: 0 25px
-				height: 100%
-				+media-breakpoint-down(md)
-					padding: 0
-					height: auto
+				height: 100%	
+				transition: all .5s ease				
 				a
 					text-transform: uppercase
 					height: 100%
 					display: inline-block
 					line-height: 64px
 					font-weight: 600
+					color: $white
+					padding: 0 25px
 					+media-breakpoint-down(md)
 						height: auto
 						line-height: 1.6
 				&.ttn
 					&:last-child
-						padding-right: 0
+						margin-right: -15px
 					a
 						text-transform: none
+					+media-breakpoint-down(md)
+						margin-right: 0 !important
 				+media-breakpoint-down(md)
 					width: 100%
 					margin: 0
+					height: auto
 					a
 						width: 100%
 						display: block
 						text-align: center
 						padding: 12px 0
-						&:hover
-							background-color: $white
-				&.active
-					a
-						color: $accent
-						+media-breakpoint-down(md)
-							background-color: $white
-				a
-					color: $white
-					&:hover
-						color: $accent
+				&.active, &:hover
+					background-color: darken($main, 5%)
+					
 
 .mobile-btn
 	display: none
