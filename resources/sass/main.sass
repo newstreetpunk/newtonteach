@@ -17,13 +17,14 @@ body textarea:required:valid
 	color: green
 
 html
-	height: 100%
+	min-height: 100%
+	font-size: 16px
 	+media-breakpoint-down(md)
 		overflow-x: hidden
 
 body
 	height: 100%
-	font-size: 16px
+	font-size: 1rem
 	position: relative
 	line-height: 1.6
 	font-family: $default-font
@@ -68,6 +69,8 @@ body
 						+media-breakpoint-down(sm)
 							margin-right: auto
 
+.container
+	max-width: 1140px
 
 main
 	flex: 1 0 auto
@@ -89,12 +92,11 @@ a
 h1, h2, h3, h4, h5, h6
 	color: $title
 	margin: 0
+	font-weight: 600
 
 h1
-	font-size: 55px
+	font-size: 3.875rem
 	line-height: 1.17
-	+media-breakpoint-down(xs)
-		font-size: 36px
 
 section
 	h2
