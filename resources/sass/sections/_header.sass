@@ -8,8 +8,9 @@
 	background-color: $main
 	color: $white
 	transition: top .5s ease
+	height: 64px
 	&.hide
-		top: -82px
+		top: -64px
 	&.show
 		top: 0
 		box-shadow: 0 10px 20px rgba($dark, .5)
@@ -17,36 +18,35 @@
 		a
 			color: $white !important
 	&__wrap
-		max-width: 1600px
+		max-width: 1377px
 		width: 100%
 		margin: 0 auto
-		padding: 20px 15px
+		height: 100%
+		padding: 0 15px
 	&__logo
 		display: block
+		flex: 0 0 155px
 		img
-			min-width: 180px
-			max-width: 200px
+			max-width: 135px
+			width: 100%
 			height: auto
 	&__menu
+		height: 100%
+		flex: 1 0 auto
 		+media-breakpoint-down(md)
-			height: calc(100vh - 90px)
+			height: calc(100vh - 64px)
 			background-color: $main
 			position: absolute
 			width: 100%
 			z-index: 2
-			top: 90px
+			top: 64px
 			right: -100%
 			transition: all .2s ease-in-out
 			flex-direction: column
+			justify-content: flex-start !important
 			overflow-y: auto
 			&.open
 				right: 0
-			.lang
-				display: flex
-				flex-direction: row
-				li
-					width: auto
-					margin: 0 6px
 		ul
 			display: flex
 			align-items: center
@@ -54,12 +54,29 @@
 			padding: 0
 			margin: 0
 			+media-breakpoint-down(md)
+				width: 100%
 				flex-direction: column
 				justify-content: center
 			li
-				margin: 0 14px
+				padding: 0 25px
+				height: 100%
+				+media-breakpoint-down(md)
+					padding: 0
+					height: auto
 				a
 					text-transform: uppercase
+					height: 100%
+					display: inline-block
+					line-height: 64px
+					font-weight: 600
+					+media-breakpoint-down(md)
+						height: auto
+						line-height: 1.6
+				&.ttn
+					&:last-child
+						padding-right: 0
+					a
+						text-transform: none
 				+media-breakpoint-down(md)
 					width: 100%
 					margin: 0
@@ -79,27 +96,6 @@
 					color: $white
 					&:hover
 						color: $accent
-	.btn
-		text-transform: none
-		&.btn-o
-			background-color: transparent
-			&:hover
-				background-color: darken($accent, 3%)
-			+media-breakpoint-down(md)
-				border-radius: 0
-				text-transform: uppercase
-				&:hover
-					background-color: $white
-					color: $accent
-		+media-breakpoint-down(md)
-				border-radius: 0
-				background-color: transparent
-				text-transform: uppercase
-				&:hover
-					background-color: $white
-					color: $accent !important
-		&:hover
-			color: $white
 
 .mobile-btn
 	display: none
@@ -109,6 +105,8 @@
 	border: none
 	cursor: pointer
 	outline: none
+	position: absolute
+	right: 15px
 	+media-breakpoint-down(md)
 		display: block
 	&:focus
