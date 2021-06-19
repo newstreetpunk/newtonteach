@@ -85,7 +85,10 @@
 						display: block
 						text-align: center
 						padding: 12px 0
-				&.active, &:hover
+				+media-breakpoint-up(lg)
+					&:hover
+						background-color: darken($main, 5%)
+				&.active
 					background-color: darken($main, 5%)
 					
 
