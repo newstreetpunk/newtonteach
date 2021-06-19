@@ -107,6 +107,8 @@ h1
 section
 	@include media-breakpoint-up(xxl)
 		padding: 80px 0
+	@include media-breakpoint-down(sm)
+		padding: 48px 0
 	padding: 5.6vmax 0
 	background-color: $white
 	&.rounded
@@ -116,11 +118,17 @@ section
 		line-height: 1.2
 		text-align: center
 		margin-bottom: 16px
+		@include media-breakpoint-down(sm)
+			br
+				display: none
 	.subtitle
 		line-height: 1.5
 		text-align: center
 		max-width: 540px
 		margin: 0 auto 30px
+		@include media-breakpoint-down(sm)
+			br
+				display: none
 
 .text-center
 	text-align: center

@@ -2,18 +2,36 @@
   &:nth-child(even)
     .page-excerpt__block
       flex-direction: row-reverse
+      @include media-breakpoint-down(md)
+        flex-direction: column-reverse
   &__block
+    @include media-breakpoint-down(md)
+      flex-direction: column-reverse
   &__text
     flex: 0 0 30.7%
     text-align: left
+    @include media-breakpoint-down(xl)
+      flex: 0 0 40%
+    @include media-breakpoint-down(lg)
+      flex: 0 0 45%
+    @include media-breakpoint-down(md)
+      flex: 1 1 100%
+      text-align: center
     h2
       text-align: left
+      @include media-breakpoint-down(md)
+        text-align: center
     a
       margin-top: 32px
     p
       margin-bottom: 0
   &__image
     flex: 0 0 56%
+    @include media-breakpoint-down(lg)
+      flex: 0 0 55%
+    @include media-breakpoint-down(md)
+      flex: 1 1 100%
+      margin-bottom: 32px
     img
       max-width: 550px
       width: 100%
