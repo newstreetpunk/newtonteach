@@ -56,9 +56,9 @@ projects.newtonteach = {
 	scripts: {
 		src: [
 			'node_modules/jquery/dist/jquery.min.js',
-			basename + '/resources/libs/timer/timer.js',
-			'node_modules/slick-carousel/slick/slick.js',
-			'node_modules/select2/dist/js/select2.js',
+			//basename + '/resources/libs/timer/timer.js',
+			//'node_modules/slick-carousel/slick/slick.js',
+			//'node_modules/select2/dist/js/select2.js',
 			basename + '/resources/js/common.js',
 		],
 		dest:       basename + '/public/js',
@@ -159,11 +159,7 @@ function newtonteach_scripts() {
 function newtonteach_images() {
 	return src(projects.newtonteach.images.src)
 	.pipe(newer(projects.newtonteach.images.dest))
-	.pipe(imagemin([
-            pngquant(),            
-        ],{
-            verbose: true
-        }))
+	//.pipe(imagemin())
 	.pipe(dest(projects.newtonteach.images.dest))
 }
 function newtonteach_cleanimg() {

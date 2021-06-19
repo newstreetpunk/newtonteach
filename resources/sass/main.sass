@@ -24,7 +24,7 @@ html
 
 body
 	height: 100%
-	font-size: 100%
+	font-size: 1rem
 	position: relative
 	line-height: 1.6
 	font-family: $default-font
@@ -75,6 +75,11 @@ body
 
 main
 	flex: 1 0 auto
+	section
+		&:first-child
+			box-shadow: 0px -32px 42px -6px rgba(141, 141, 141, 0.1)
+		&:nth-child(even)
+			background-color: $bg
 
 img
 	display: block
@@ -100,19 +105,22 @@ h1
 	line-height: 1.17
 
 section
+	@include media-breakpoint-up(xxl)
+		padding: 80px 0
+	padding: 5.6vmax 0
+	background-color: $white
+	&.rounded
+		border-radius: 32px 32px 0px 0px
 	h2
 		font-size: 1.5rem
-		line-height: 1.23
+		line-height: 1.2
 		text-align: center
-		margin-bottom: 40px
-		+media-breakpoint-down(xs)
-			font-size: 30px
-			margin-bottom: 20px
-	.sect-subtitle
+		margin-bottom: 16px
+	.subtitle
 		line-height: 1.5
 		text-align: center
-		margin: 0 auto 32px
-		max-width: 560px
+		max-width: 382px
+		margin: 0 auto 30px
 
 .text-center
 	text-align: center
@@ -145,24 +153,26 @@ input
 @import "components/components"
 
 // pages
-@import "pages/pages"
+//@import "pages/pages"
 
 // sections
 @import "sections/header"
 @import "sections/banner"
-@import "sections/items"
-@import "sections/forcreators"
-@import "sections/subscribe"
-@import "sections/contacts"
+@import "sections/page-excerpt"
 
-@import "sections/page-title"
+//@import "sections/items"
+//@import "sections/forcreators"
+//@import "sections/subscribe"
+//@import "sections/contacts"
 
-@import "sections/team"
-@import "sections/purpose"
-@import "sections/reviews"
+//@import "sections/page-title"
 
-@import "sections/small-pages"
-@import "sections/temporary"
+//@import "sections/team"
+//@import "sections/purpose"
+//@import "sections/reviews"
+
+//@import "sections/small-pages"
+//@import "sections/temporary"
 
 @import "sections/footer"
 	
