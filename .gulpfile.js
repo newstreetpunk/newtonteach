@@ -159,11 +159,15 @@ function newtonteach_scripts() {
 function newtonteach_images() {
 	return src(projects.newtonteach.images.src)
 	.pipe(newer(projects.newtonteach.images.dest))
-	//.pipe(imagemin())
+	// .pipe(imagemin([
+  //           pngquant(),            
+  //       ],{
+  //           verbose: true
+  //       }))
 	.pipe(dest(projects.newtonteach.images.dest))
 }
 function newtonteach_cleanimg() {
-	return del('' + projects.newtonteach.images.dest + '/**/*', { force: true })
+	return del(projects.newtonteach.images.dest + '/**/*', { force: true })
 }
 
 // Watch
