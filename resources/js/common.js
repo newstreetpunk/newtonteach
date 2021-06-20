@@ -27,18 +27,18 @@ jQuery(function($) {
 			}
 	});
 
-	$('.onescreen__slider').slick({
-		autoplay: true,
-		infinity: true,
-		arrows: false,
-		dots: true,
-		adaptiveHeight: true,
-		lazyLoad: false
-	});
+	// $('.onescreen__slider').slick({
+	// 	autoplay: true,
+	// 	infinity: true,
+	// 	arrows: false,
+	// 	dots: true,
+	// 	adaptiveHeight: true,
+	// 	lazyLoad: false
+	// });
 
-	$('select').select2({
-		width: '100%',
-		dropdownParent: $('.select-wrapper')
-	});
+	// $('select').select2({
+	// 	width: '100%',
+	// 	dropdownParent: $('.select-wrapper')
+	// });
 
 });

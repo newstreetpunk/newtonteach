@@ -1,0 +1,26 @@
+.types
+  &-card
+    border-radius: 16px
+    background-color: $white
+    box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.08)
+    overflow: hidden
+    margin-bottom: 30px
+    @include media-breakpoint-down(sm)
+      margin-bottom: 15px
+    &__header
+      padding: 16px
+      img
+        margin-right: 10px
+      h3
+        font-size: 24px
+        color: $white
+      &.--green
+        background-color: $color_quizzes_simple_light
+      &.--blue
+        background-color: $color_quizzes_intermediate_lightest
+      &.--purple
+        background-color: $color_quizzes_advanced_lightest
+    &__body
+      padding: 26px 35px
+      @include media-breakpoint-down(sm)
+        padding: 26px
