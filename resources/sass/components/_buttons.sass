@@ -22,12 +22,23 @@
 		border-top: none
 		border-bottom: none
 	&.btn-green
-		background-color: $green
+		background-color: $color_quizzes_simple_light
 		&:hover
-			background-color: darken($green, 3%)
+			background-color: darken($color_quizzes_simple_light, 3%)
 			color: $white
 		&:active
-			background-color: darken($green, 10%)
+			background-color: darken($color_quizzes_simple_light, 10%)
+			border-left: none
+			border-right: none
+			border-top: none
+			border-bottom: none
+	&.btn-purple
+		background-color: $color_quizzes_advanced_lightest
+		&:hover
+			background-color: darken($color_quizzes_advanced_lightest, 3%)
+			color: $white
+		&:active
+			background-color: darken($color_quizzes_advanced_lightest, 10%)
 			border-left: none
 			border-right: none
 			border-top: none
@@ -45,19 +56,19 @@
 			border-top: none
 			border-bottom: none
 	&.btn-blue
-		background-color: $main
+		background-color: $color_quizzes_intermediate_lightest
 		color: $white
 		&.btn-o
 			background-color: transparent
-			border: 1px solid $main
-			color: $main
+			border: 1px solid $color_quizzes_intermediate_lightest
+			color: $color_quizzes_intermediate_lightest
 		&:hover
-			background-color: darken($main, 3%)
+			background-color: darken($color_quizzes_intermediate_lightest, 3%)
 			color: $white
 		&:active
-			background-color: darken($main, 10%)
+			background-color: darken($color_quizzes_intermediate_lightest, 10%)
 			border-left: none
 			border-right: none
 			border-top: none
 			border-bottom: none
-			outline: 2px solid rgba($main, .5)
+			outline: 2px solid rgba($color_quizzes_intermediate_lightest, .5)
