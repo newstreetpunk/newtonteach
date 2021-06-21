@@ -5,11 +5,9 @@
 	padding: 20px 0
 	flex: 0 0 auto
 	position: relative
-	margin-top: 200px
-	+media-breakpoint-down(md)
+	margin-top: 25px
+	@include media-breakpoint-down(lg)
 		padding-bottom: 0
-	+media-breakpoint-down(xs)
-		margin-top: 170px
 	&:before
 		content: ''
 		display: inline-block
@@ -22,7 +20,7 @@
 		background-size: cover
 		background-position: center
 	&__widget
-		+media-breakpoint-down(md)
+		@include media-breakpoint-down(lg)
 			margin-bottom: 30px
 	&__logo
 		max-width: 160px

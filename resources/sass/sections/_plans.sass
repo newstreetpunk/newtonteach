@@ -1,0 +1,73 @@
+.plans
+	&-card
+		height: 100%
+		display: flex
+		flex-direction: column
+		padding: 32px 24px 48px
+		p
+			line-height: 19px
+		&__header
+			min-height: 82px
+			margin-bottom: 40px
+			@include media-breakpoint-down(md)
+				min-height: 1px
+			h3
+				font-size: 24px
+				margin-bottom: 16px
+			p
+				margin: 0
+		&__body
+			padding: 24px 0 16px
+			border-top: 1px solid #f6f6f6
+			border-bottom: 1px solid #f6f6f6
+			margin-bottom: 30px
+			flex: 1 0 auto
+			@include media-breakpoint-down(md)
+				flex: auto
+			// min-height: 217px
+			p
+				margin-bottom: 8px
+				&:not(:nth-child(2))
+					color: $title
+		&__footer
+			flex: 1 0 auto
+			display: flex
+			justify-content: space-between
+			flex-direction: column
+			@include media-breakpoint-down(md)
+				flex: auto
+		.btn
+			padding: 16px
+			min-width: 180px
+			max-width: 180px
+			font-weight: 400
+			margin: 50px auto 0
+
+.plans-money
+	font-size: 64px
+	line-height: 1
+	font-weight: 600
+	color: $title
+	position: relative
+	width: fit-content
+	margin: 0 auto
+	sup
+		position: absolute
+		font-size: 24px
+		left: -24px
+		top: 12px
+
+.card-footer__row
+	display: flex
+	align-items: center
+	margin-bottom: 16px
+	img
+		width: 32px
+		height: auto
+		margin-right: 8px
+		+ p
+			font-size: 12px
+			text-align: left
+	p
+		margin: 0
+			
