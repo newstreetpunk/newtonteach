@@ -2,4 +2,15 @@
 	margin: 0 5px
 	font-weight: 400
 	min-width: 122px
-	// color: $text-color
+	opacity: 0.4
+	&.active
+		opacity: 1
+		&:hover
+			opacity: 1
+	&:hover
+		opacity: 0.5
+	@include media-breakpoint-down(sm)
+		min-width: 1px
+		width: auto
+		padding: 8px 15px
+		margin: 0 4px

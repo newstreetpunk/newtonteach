@@ -1,3 +1,47 @@
 .info
 	h2
 		margin-bottom: 32px
+	&-block
+		margin-top: 50px
+
+.info-item__content
+	h5
+		font-size: 16px
+		font-weight: 700
+		margin-bottom: 24px
+		line-height: 19px
+	.btn
+		padding: 16px 32px
+		font-weight: 400
+		margin-top: 64px
+		@include media-breakpoint-down(md)
+			margin: 50px auto 0
+			display: block
+			max-width: 306px
+			text-align: center
+
+.info-item
+	display: none
+	.row
+		@include media-breakpoint-down(lg)
+			flex-direction: column-reverse !important
+
+.info-image
+	@include media-breakpoint-down(lg)
+		margin-bottom: 32px	
+		img
+			margin-right: auto		
+
+.info-list__item
+	&:not(:last-child)
+		margin-bottom: 8px
+	span
+		white-space: nowrap
+		color: #fff
+		padding: 8px 16px
+		display: inline-block
+		line-height: 1.5
+		border-radius: 50px
+		opacity: 0.8
+		@include media-breakpoint-down(sm)
+			font-size: 12px

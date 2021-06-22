@@ -27,18 +27,21 @@ jQuery(function($) {
 			}
 	});
 
-	// $('.onescreen__slider').slick({
-	// 	autoplay: true,
-	// 	infinity: true,
-	// 	arrows: false,
-	// 	dots: true,
-	// 	adaptiveHeight: true,
-	// 	lazyLoad: false
-	// });
+	// Tabs
 
-	// $('select').select2({
-	// 	width: '100%',
-	// 	dropdownParent: $('.select-wrapper')
-	// });
+	$('.info-item[data-id="0"]').show();
+
+	$('.tab-link').click( function (e) {
+		const id = $(this).data('id');
+
+		e.preventDefault();
+		if($(this).hasClass('active')) return;
+		$('.tab-link').removeClass('active');
+		$(this).addClass('active');
+
+		$('.info-item').fadeOut(300);
+		$('.info-item[data-id="'+id+'"]').fadeIn(300);
+
+	})
 
 });
