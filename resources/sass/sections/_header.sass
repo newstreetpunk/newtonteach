@@ -57,14 +57,20 @@
 				justify-content: center
 			li
 				height: 100%	
-				transition: all .5s ease				
+				transition: all .5s ease
+				position: relative
+				&:hover
+					> .sub-menu
+						opacity: 1
+						visibility: visible
+						transform: translate(0, 0)		
 				a
 					height: 100%
 					display: inline-block
 					line-height: 60px
 					font-weight: 600
 					color: $white
-					padding: 0 25px
+					padding: 0 30px
 					+media-breakpoint-down(md)
 						height: auto
 						line-height: 1.6
@@ -89,6 +95,37 @@
 						background-color: $primary_lighter
 				&.active
 					background-color: $primary_lighter
+
+
+.header__menu .sub-menu
+	position: absolute
+	display: block
+	left: 0
+	top: 100%
+	background-color: $primary_lighter
+	min-width: 100%
+	width: fit-content
+	padding: 0
+	border-radius: 0px 0px 16px 16px
+	overflow: hidden
+	opacity: 0
+	visibility: hidden
+	transform: translate(0, -5px)
+	transition: all .2s ease
+	//padding: 10px 0
+	li
+		height: auto
+	a
+		height: 35px
+		line-height: 35px
+		width: 100%
+		font-size: 12px
+		display: block
+		font-weight: 700
+		padding: 0 20px
+		&:hover
+			background-color: $main
+
 					
 
 .mobile-btn
