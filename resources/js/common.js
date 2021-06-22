@@ -39,8 +39,8 @@ jQuery(function($) {
 		$('.tab-link').removeClass('active');
 		$(this).addClass('active');
 
-		$('.info-item').fadeOut(300);
-		$('.info-item[data-id="'+id+'"]').fadeIn(300);
+		$('.info-item').hide();
+		$('.info-item[data-id="'+id+'"]').show();
 
 	})
 
