@@ -31,7 +31,7 @@
 	&__menu
 		height: 100%
 		flex: 1 0 auto
-		+media-breakpoint-down(md)
+		@include media-breakpoint-down(lg)
 			height: calc(100vh - 60px)
 			background-color: $main
 			position: absolute
@@ -51,7 +51,7 @@
 			list-style-type: none
 			padding: 0
 			margin: 0
-			+media-breakpoint-down(md)
+			@include media-breakpoint-down(lg)
 				width: 100%
 				flex-direction: column
 				justify-content: center
@@ -71,7 +71,7 @@
 					font-weight: 600
 					color: $white
 					padding: 0 30px
-					+media-breakpoint-down(md)
+					@include media-breakpoint-down(lg)
 						height: auto
 						line-height: 1.6
 				&.ttn
@@ -79,9 +79,9 @@
 						margin-right: -15px
 					a
 						text-transform: none
-					+media-breakpoint-down(md)
+					@include media-breakpoint-down(lg)
 						margin-right: 0 !important
-				+media-breakpoint-down(md)
+				@include media-breakpoint-down(lg)
 					width: 100%
 					margin: 0
 					height: auto
@@ -112,7 +112,14 @@
 	visibility: hidden
 	transform: translate(0, -5px)
 	transition: all .2s ease
-	//padding: 10px 0
+	@include media-breakpoint-down(lg)
+		position: relative
+		top: 0
+		opacity: 1
+		visibility: visible
+		background-color: transparent
+		display: none
+		padding-bottom: 15px
 	li
 		height: auto
 	a
@@ -127,7 +134,25 @@
 		&:hover
 			background-color: $main
 
-					
+
+.menu-link-arrow
+	display: none
+	@include media-breakpoint-down(lg)
+		display: flex
+		align-items: center
+		justify-content: center
+		position: absolute
+		height: 50px
+		width: 50px
+		right: 0
+		top: 0
+		font-size: 22px
+		border-left: 1px solid rgba(#fff, .1)
+		span
+			transition: all .3s
+		&.active
+			span
+				transform: rotate(90deg)		
 
 .mobile-btn
 	display: none
@@ -139,7 +164,7 @@
 	outline: none
 	position: absolute
 	right: 15px
-	+media-breakpoint-down(md)
+	@include media-breakpoint-down(lg)
 		display: block
 	&:focus
 		outline: none

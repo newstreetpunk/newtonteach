@@ -5,6 +5,10 @@ jQuery(function($) {
 		$('.header__menu').toggleClass('open');
 	});
 
+	$('.menu-link-arrow').click(function(){
+		$(this).toggleClass('active').prev().slideToggle(100);
+	})
+
 	//Hide Menu on Scroll
 	var hideHeaderPos = 82;
 
