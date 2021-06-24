@@ -72,3 +72,23 @@
 			border-top: none
 			border-bottom: none
 			outline: 2px solid rgba($color_quizzes_intermediate_lightest, .5)
+
+.sign-menu
+	@include media-breakpoint-down(lg)
+		margin-top: 30px !important
+	.btn, .btn-o
+		padding: 0 
+		height: auto
+		min-width: 1px
+		line-height: 1
+		border-radius: 100px
+		margin: 0 5px
+		&:hover
+			background-color: darken($accent, 3%)
+			color: $white
+		@include media-breakpoint-down(lg)
+			background-color: transparent !important
+		a
+			height: auto
+			line-height: 1
+			padding: 12px 24px
