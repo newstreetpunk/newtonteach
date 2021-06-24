@@ -95,6 +95,8 @@
 						background-color: $primary_lighter
 				&.active
 					background-color: $primary_lighter
+					.menu-link-arrow
+						transform: rotate(90deg)
 
 
 .header__menu .sub-menu
@@ -147,12 +149,7 @@
 		right: 0
 		top: 0
 		font-size: 22px
-		border-left: 1px solid rgba(#fff, .1)
-		span
-			transition: all .3s
-		&.active
-			span
-				transform: rotate(90deg)		
+		transition: all .3s		
 
 .mobile-btn
 	display: none

@@ -5,8 +5,8 @@ jQuery(function($) {
 		$('.header__menu').toggleClass('open');
 	});
 
-	$('.menu-link-arrow').click(function(){
-		$(this).toggleClass('active').prev().slideToggle(100);
+	$('.toggle-link').click(function(){
+		$(this).toggleClass('active').find('.sub-menu').slideToggle(50);
 	})
 
 	//Hide Menu on Scroll
