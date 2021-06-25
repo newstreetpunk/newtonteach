@@ -1,0 +1,41 @@
+.page-title
+	background-color: $main
+	color: $white
+	h1
+		font-size: 40px
+		line-height: 48px
+		color: $white
+		margin-bottom: 16px
+		padding-right: 15%
+		@include media-breakpoint-down(xl)
+			padding-right: 0
+		@include media-breakpoint-down(lg)
+			font-size: 32px
+			line-height: 38px
+		@include media-breakpoint-down(sm)
+			font-size: 26px
+			line-height: 32px
+	.btn
+		font-weight: 400
+		padding: 16px 32px
+	.container
+		@include media-breakpoint-down(lg)
+			max-width: 95%
+		@include media-breakpoint-down(md)
+			max-width: 100%
+	.row
+		@include media-breakpoint-down(md)
+			flex-direction: column-reverse !important
+			text-align: center
+	&__image
+		img
+			margin-left: auto
+			@include media-breakpoint-down(md)
+				margin: 0 auto 30px
+
+.page-subtitle
+	line-height: 1.5
+	margin-bottom: 32px
+	padding-right: 15%
+	@include media-breakpoint-down(xl)
+		padding-right: 0
