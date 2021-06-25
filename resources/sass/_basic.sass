@@ -31,6 +31,8 @@ body
 	flex-direction: column
 	&.page
 		padding-top: 60px
+	&.gray-bg
+		background-color: #f4f4f4
 
 
 @media (min-width: 1400px)
@@ -46,6 +48,8 @@ main
 			background-color: $bg
 		&:last-child
 			padding-bottom: 200px
+	.transparent
+		background-color: transparent !important
 	&.reverse
 		.page-excerpt
 			&:nth-child(odd)
@@ -58,8 +62,6 @@ main
 					flex-direction: row
 					@include media-breakpoint-down(md)
 						flex-direction: column-reverse
-
-
 
 img
 	display: block
