@@ -1,0 +1,63 @@
+.accent
+	color: $accent
+	font-weight: bold
+.pricing-table
+	font-weight: 600
+	color: $main
+	@include media-breakpoint-down(lg)
+		font-size: 12px
+		line-height: 14px
+		@include media-breakpoint-down(sm)
+			font-size: 10px
+	tbody, td, tfoot, th, tr
+		border: none
+	tr		
+		td:last-child, th:last-child
+			background-color: rgba($color_quizzes_intermediate_lightest, .1)
+	thead
+		border-top: 1px solid #F6F6F6
+		border-bottom: 1px solid #F6F6F6
+		th
+			padding-top: 30px
+			@include media-breakpoint-down(lg)
+				padding-top: 18px
+		div
+			display: inline-block
+			position: relative
+			left: 50%
+			transform: translateX(-50%)
+		h4
+			font-size: 24px
+			line-height: 29px
+			font-weight: bold
+			@include media-breakpoint-down(lg)
+				font-size: 12px
+				line-height: 14px
+			@include media-breakpoint-down(sm)
+				font-size: 10px
+		span
+			font-size: 16px
+			line-height: 1.5
+			font-weight: 400
+			color: $text-color
+			@include media-breakpoint-down(lg)
+				font-size: 12px
+				line-height: 12px
+			@include media-breakpoint-down(sm)
+				font-size: 9px
+	tbody
+		tr
+			&:last-child
+				border-bottom: 1px solid #F6F6F6
+			td
+				padding: 12px 0
+				@include media-breakpoint-down(lg)
+					padding: 8px 0
+		td:not(.zero):not(:first-child)
+			background-image: url(../img/icons/check-accent.svg)
+			background-repeat: no-repeat
+			background-position: center
+			@include media-breakpoint-down(lg)
+				background-size: 16px
+			&.none
+				background-image: url(../img/icons/minus.svg)
