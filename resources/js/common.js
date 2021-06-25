@@ -5,9 +5,18 @@ jQuery(function($) {
 		$('.header__menu').toggleClass('open');
 	});
 
-	$('.toggle-link').click(function(){
-		$(this).toggleClass('active').find('.sub-menu').slideToggle(50);
-	})
+	function toggleSubmenu(){
+		$('.toggle-link').click(function(){
+			if($(window).width() < 992){
+				$(this).toggleClass('active').find('.sub-menu').slideToggle(50);
+			}
+		})
+	}
+
+	toggleSubmenu();
+
+	// $(window).resize(function(){toggleSubmenu()});
+	
 
 	//Hide Menu on Scroll
 	var hideHeaderPos = 82;
