@@ -26,28 +26,33 @@
 			position: relative
 			left: 50%
 			transform: translateX(-50%)
-		h4
-			font-size: 24px
-			line-height: 29px
-			font-weight: bold
 			@include media-breakpoint-down(lg)
-				font-size: 12px
-				line-height: 14px
-			@include media-breakpoint-down(sm)
-				font-size: 10px
-		span
-			font-size: 16px
-			line-height: 1.5
-			font-weight: 400
-			color: $text-color
-			@include media-breakpoint-down(lg)
-				font-size: 12px
-				line-height: 12px
-			@include media-breakpoint-down(sm)
-				font-size: 9px
+				text-align: center
+				display: block
+				left: 0
+				transform: translateX(0)
+	h4
+		font-size: 24px
+		line-height: 29px
+		font-weight: bold
+		@include media-breakpoint-down(lg)
+			font-size: 12px
+			line-height: 14px
+		@include media-breakpoint-down(sm)
+			font-size: 10px
+	span
+		font-size: 16px
+		line-height: 1.5
+		font-weight: 400
+		color: $text-color
+		@include media-breakpoint-down(lg)
+			font-size: 12px
+			line-height: 12px
+		@include media-breakpoint-down(sm)
+			font-size: 9px
 	tbody
 		tr
-			&:last-child
+			&.last
 				border-bottom: 1px solid #F6F6F6
 			td
 				padding: 12px 0
@@ -61,3 +66,33 @@
 				background-size: 16px
 			&.none
 				background-image: url(../img/icons/minus.svg)
+	&-footer
+		td
+			padding: 30px 0 0 !important
+			@include media-breakpoint-down(lg)
+				padding: 12px 0 !important
+				// vertical-align: middle
+			&:not(:first-child)
+				text-align: center
+			@include media-breakpoint-down(lg)
+				a
+					background-color: rgba($color_quizzes_intermediate_lightest, .1)
+					display: inline-block
+					border-radius: 6px
+					padding: 3px
+		.btn
+			font-weight: 400
+			font-size: 16px
+			padding: 8px 16px
+			min-width: 1px
+			max-width: 100px
+			display: block
+			margin: 24px auto 0
+			&.btn-blue
+				background-color: $title
+				&:hover
+					background-color: darken($title, 3%)
+				&:active
+					background-color: darken($title, 10%)
+			@include media-breakpoint-down(lg)
+				display: none
