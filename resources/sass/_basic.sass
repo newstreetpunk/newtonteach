@@ -46,6 +46,20 @@ main
 			background-color: $bg
 		&:last-child
 			padding-bottom: 200px
+	&.reverse
+		.page-excerpt
+			&:nth-child(odd)
+				.page-excerpt__block
+					flex-direction: row-reverse
+					@include media-breakpoint-down(md)
+						flex-direction: column-reverse
+			&:nth-child(even)
+				.page-excerpt__block
+					flex-direction: row
+					@include media-breakpoint-down(md)
+						flex-direction: column-reverse
+
+
 
 img
 	display: block
