@@ -31,8 +31,6 @@ body
 	flex-direction: column
 	&.page
 		padding-top: 60px
-	&.gray-bg
-		background-color: #f4f4f4
 
 
 @media (min-width: 1400px)
@@ -44,6 +42,7 @@ main
 	section
 		&:first-child
 			box-shadow: 0px -32px 42px -6px rgba(141, 141, 141, 0.1)
+			margin-top: 0
 		&:nth-child(even)
 			background-color: $bg
 		&:last-child
@@ -62,6 +61,15 @@ main
 					flex-direction: row
 					@include media-breakpoint-down(md)
 						flex-direction: column-reverse
+
+.white-bg
+	background-color: #fff !important
+.gray-bg
+	background-color: #F4F8FF
+
+.bdrs-16
+	border-radius: 16px
+	overflow: hidden
 
 .align-top
 	vertical-align: top
@@ -82,13 +90,14 @@ h1
 
 section
 	@include media-breakpoint-up(xxl)
-		padding: 80px 0
+		padding: 80px 0 112px
 	@include media-breakpoint-down(sm)
-		padding: 48px 0
-	padding: 5.6vmax 0
+		padding: 48px 0 80px
+	// padding: 5.6vmax 0
 	background-color: $white
 	&.rounded
 		border-radius: 32px 32px 0px 0px
+		margin-top: -32px
 	h2
 		font-size: 1.5rem
 		line-height: 1.2
