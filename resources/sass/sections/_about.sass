@@ -1,5 +1,12 @@
 .about
 	background: linear-gradient(360deg, #D6DFEE 0%, #F4F8FF 63.11%, rgba(255, 255, 255, 0) 100%)
+	@include media-breakpoint-down(md)
+		.container
+			max-width: 100%
+			padding: 0
+	@include media-breakpoint-down(sm)
+		h2
+			padding: 0 15px
 	&-grid
 		position: relative
 		img
@@ -7,13 +14,30 @@
 			width: 100%
 			height: auto
 			margin: 80px auto
+			@include media-breakpoint-down(md)
+				margin: 40px auto
+			@include media-breakpoint-down(sm)
+				margin: 30px auto 120px
 		&:before
 			content: ''
 			position: absolute
-			bottom: -250px
-			left: -110px
+			bottom: -270px
+			left: -95px
 			z-index: 1
 			width: 274px
 			height: 454px
-			background-image: url(../img/pages/about/ball-1.svg)
+			background-image: url(../img/pages/about/ball-01.svg)
 			background-size: cover
+			transform: rotate(-11.89deg)
+			@include media-breakpoint-down(xl)
+				left: -190px
+			@include media-breakpoint-down(lg)
+				transform: rotate(-11.89deg) scale(.8)
+			@include media-breakpoint-down(md)
+				transform: rotate(-11.89deg) scale(.5)
+				left: -110px
+			@include media-breakpoint-down(sm)
+				transform: rotate(-11.89deg) scale(.4)
+				left: -135px
+			@media(max-width: 400px)
+				transform: rotate(-11.89deg) scale(.3)
