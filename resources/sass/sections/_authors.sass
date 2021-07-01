@@ -1,4 +1,35 @@
 .authors
+	&-intro
+		min-height: 700px
+		height: auto
+		background: linear-gradient(360deg, #D6DFEE 0%, #F4F8FF 60.42%, rgba(255, 255, 255, 0) 100%)
+		position: relative
+		display: flex
+		justify-content: center
+		align-items: flex-end
+		z-index: 1
+		padding-bottom: 80px
+		overflow-x: hidden
+		&:before
+			content: ''
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			width: 1600px
+			height: 648px
+			background-size: 100%
+			background-position: center top
+			background-repeat: no-repeat
+			background-image: url(../img/pages/authors/authors-bg.png)
+			z-index: -1
+			@media (min-width: 1400px)
+				background-image: url(../img/pages/authors/authors-bg-2x.png)
+			@include media-breakpoint-down(sm)
+				background-image: url(../img/pages/authors/authors-bg-mob.png)
+		&__text
+			margin-top: auto
+
 	&-btn
 		font-weight: 400
 		padding: 16px 26px
