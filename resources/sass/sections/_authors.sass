@@ -8,8 +8,18 @@
 		justify-content: center
 		align-items: flex-end
 		z-index: 1
-		padding-bottom: 80px
+		padding-bottom: 70px
 		overflow-x: hidden
+		@include media-breakpoint-down(sm)
+			padding: 0 10px 70px
+			min-height: 1px
+			height: 155vw
+		@media (max-width: 440px)
+			height: 160vw
+		@media (max-width: 380px)
+			height: 170vw
+		@media (max-width: 335px)
+			height: 180vw
 		&:before
 			content: ''
 			position: absolute
@@ -18,17 +28,27 @@
 			transform: translate(-50%, -50%)
 			width: 1600px
 			height: 648px
-			background-size: 100%
+			background-size: cover
 			background-position: center top
 			background-repeat: no-repeat
 			background-image: url(../img/pages/authors/authors-bg.png)
 			z-index: -1
-			@media (min-width: 1400px)
+			@include media-breakpoint-up(xxl)
 				background-image: url(../img/pages/authors/authors-bg-2x.png)
+			@include media-breakpoint-down(xl)
+				width: 1300px
+			@include media-breakpoint-down(lg)
+				width: 1000px
 			@include media-breakpoint-down(sm)
 				background-image: url(../img/pages/authors/authors-bg-mob.png)
+				width: 105%
+				height: 110vw
+				top: 0
+				transform: translate(-50%, 0)
 		&__text
 			margin-top: auto
+		.subtitle
+			max-width: 380px
 
 	&-btn
 		font-weight: 400
